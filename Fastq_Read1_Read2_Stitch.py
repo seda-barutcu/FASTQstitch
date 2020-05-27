@@ -73,8 +73,10 @@ with open('filelistR1.txt') as f:
                         
                         #if can not stitch, write read1/2 sequences separated by ">"
                         
-                        else : ident_seq_dict[ident] = ident_seq_dict[ident] + ">" + nseq
-                
+                        else : 
+                            ident_seq_dict[ident] = ident_seq_dict[ident] + ">" + nseq
+                            pos = 0
+                            
                 # 6: stitch reverse of read2 quality-score line to read1-qc-line in accordance with sequence line stitching:
                 
                 elif it%4==2 :
